@@ -30,6 +30,8 @@ namespace kemmis_info
         {
             // Add framework services.
             services.AddMvc();
+
+            ConfigureAuthPolicy(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +64,35 @@ namespace kemmis_info
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+        }
+
+        private void ConfigureAuthPolicy(IServiceCollection services)
+        {
+            //https://docs.asp.net/en/latest/security/authorization/policies.html
+
+            services.AddAuthorization(options =>
+            {
+                options.AddCloudscribeCoreDefaultPolicies();
+
+                options.AddCloudscribeLoggingDefaultPolicy();
+
+                options.AddCloudscribeCoreSimpleContentIntegrationDefaultPolicies();
+
+                options.AddPolicy(
+                    "FileManagerPolicy",
+                    authBuilder =>
+                    {
+                        authBuilder.RequireRole("Administrators");
+                    });
+
+                options.AddPolicy(
+                    "FileManagerDeletePolicy",
+                    authBuilder =>
+                    {
+                        authBuilder.RequireRole("Administrators");
+                    });
+            });
+
         }
     }
 }

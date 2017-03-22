@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<post>
+  <title>test</title>
+  <slug>test</slug>
+  <author>Admin</author>
+  <pubDate>2017-03-13T15:10:00.0000000Z</pubDate>
+  <lastModified>2017-03-13T15:10:52.8795168Z</lastModified>
+  <excerpt>tag-1 tag-2 etc</excerpt>
+  <content>&lt;p&gt;test test test content&amp;nbsp;&lt;/p&gt;
+</content>
+  <ispublished>true</ispublished>
+  <categories></categories>
+  <comments></comments>
+</post>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<post>
+  <title>my first blog post!!</title>
+  <slug>my-first-blog-post</slug>
+  <author>Admin</author>
+  <pubDate>2017-03-20T18:50:41.8161280Z</pubDate>
+  <lastModified>2017-03-20T18:50:41.8241333Z</lastModified>
+  <excerpt></excerpt>
+  <content>&lt;p&gt;Hello worlds!!!&lt;/p&gt;</content>
+  <ispublished>true</ispublished>
+  <categories></categories>
+  <comments></comments>
+</post>
